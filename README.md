@@ -1,27 +1,28 @@
-# AngularCourseManager
+# Gerenciador de cursos feito no Angular
+Tô usando este projeto pra aprender um pouco mais sobre o funcionamento básico do Angular, como Components, Dependency Injection, Hooks e Interpolaridade.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Para gerar este projeto foi usado o [Angular CLI](https://github.com/angular/angular-cli) na versão 12.1.1.
 
-## Development server
+## Botar o projeto pra rodar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+É só baixar e usar `ng serve` pra subir o projeto como dev. O projeto vai subir em `http://localhost:4200/`. 
 
-## Code scaffolding
+## Gerar novos components/serviços/etc
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Alguns componentes tô fazendo na mão pra ir pegando as manhas, mas alguns usei o CLI `ng g c nome` pra gerar (g) um novo componente (c) já com a pastas, com arquivos e setado no módulo principal. Dá pra usar o CLI pra gerar vários tipos de coisas, como `ng (g)enerate (d)irective|(p)ipe|(s)ervice|(c)lass|(g)uard|(i)nterface|(e)num|(m)odule`. Dá pra usar somente as letras dentro dos parênteses ou a palavra toda.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pra gerar o build basta usar `ng build`, que será armazenado na pasta `dist/`.
 
-## Running unit tests
+## Executando testes unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Usar `ng test` pra executar os testes via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Executando testes ponta-a-ponta
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Usar `ng e2e` vai executar este tipo de teste, mas aí precisa de um módulo externo pra fazer isso.
 
-## Further help
+## Ajuda
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pra mais ajuda com o CLI do Angular é só `ng help` ou ler a [documentação](https://angular.io/cli).
