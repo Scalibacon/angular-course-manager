@@ -1,4 +1,10 @@
 # Gerenciador de cursos feito no Angular
+<img align="left" alt="angular" src="https://img.shields.io/badge/-angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge" />
+<img align="left" alt="javascript" src="https://img.shields.io/badge/-javascript-F7DF1E?logo=javascript&logoColor=3e3e3e&style=for-the-badge" />
+<img align="left" alt="typescript" src="https://img.shields.io/badge/-typescript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" />
+<img align="left" alt="html5" src="https://img.shields.io/badge/-html5-E34F26?logo=html5&logoColor=white&style=for-the-badge" />
+<img align="left" alt="css3" src="https://img.shields.io/badge/-css3-1572B6?logo=css3&logoColor=white&style=for-the-badge" />
+<br><br>
 Tô usando este projeto pra aprender um pouco mais sobre o funcionamento básico do Angular, como Components, Dependency Injection, Hooks e Interpolaridade.
 
 Para gerar este projeto foi usado o [Angular CLI](https://github.com/angular/angular-cli) na versão 12.1.1.
