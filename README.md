@@ -36,7 +36,6 @@ Pra mais ajuda com o CLI do Angular é só `ng help` ou ler a [documentação](h
 ## Anotações
  
 ### Algumas coisas podem estar erradas, já que é meu primeiro contato com o Angular. Vou corrigindo os conceitos conforme forem ficando mais claros.
-<br>
 
 #### Os componentes e os módulos precisam ser importados no arquivo app.modules.ts para serem usados nos templates.
     @NgModule({ 
@@ -59,12 +58,15 @@ Pra mais ajuda com o CLI do Angular é só `ng help` ou ler a [documentação](h
     <img [src]="user.imageUrl" alt="image"/>
 Neste caso a propriedade "src" terá o valor do atributo "imageUrl" do objeto "user", que deve estar presente na classe do component que tem esse código HTML inserido em seu template.
 
+
 #### [Two-way data binding](https://angular.io/guide/two-way-binding) funciona de maneira similar ao one-way, mas também irá ouvir os eventos da view que alterarão o valor da variável do component.ts vinculada. Até o momento só vi sendo usado em forms, mas futuramente verei aplicações em outros contextos.
     <input [(ngModel)]="user.name"/>
 Neste exemplo o ngModel faz parte do módulo FormsModule, que deve ser importado no app.modules.ts pra funcionar. Creio que ele dê um set no value do input com a variável "user.name" (que deve estar no component.ts) e altere essa mesma variável conforme o usuário altere o input na view.
 
+
 #### Para exibir o valor de variáveis JavaScript no HTML deve-se colocá-lo entre duas chaves. É possível também utilizar uma if ternário.
     <p>{{ user.description === "" ? "Vazio." : user.description }}</p>
+
 
 #### É necessário importar o módulo RouterModule no app.modules.ts pra usar o recurso de roteamento de rotas de uma aplicação SPA. Até o momento só vi a configuração de rotas dentro do próprio app.modules, mas espero ver um jeito mais limpinho de fazer isso. Para configurá-lo devemos passar um array de objetos que representam nossas rotas. Esses objetos contêm o path, que é o caminho/URL da rota, o component que é o component/page que será carregado na rota, além de outros atributos. A rota raiz é representada por '' (no React é '/') e a rota de exceção é representada por '**'.
     // arquivo app.modules.ts
@@ -82,6 +84,7 @@ Neste exemplo o ngModel faz parte do módulo FormsModule, que deve ser importado
     // usar o recurso em um template HTML
     <a [routerLink]="['/rota/desejada', parâmetros]">Redirecionar</a>
 
+
 #### Para se usar [hooks](https://angular.io/guide/lifecycle-hooks) nos components eles devem implementar as respectivas interfaces e implementar seus métodos. O OnInit e o OnChanges são parecidos com o useEffect do React, onde o primeiro é executado quando o componente é carregado na tela e o segundo quando uma variável vinculada (@Input) sofre alterações.
     @Component()
     export class MyComponent implements OnInit, OnChanges ... {
@@ -94,13 +97,16 @@ Neste exemplo o ngModel faz parte do módulo FormsModule, que deve ser importado
       }
     }
 
+
 #### A adição de classes a um elemento HTML pode ser feita de forma dinâmica usando o ngClass. Para isso precisamos passar um objeto com uma chave, que é a classe a ser adicionada ao elemento, e um valor que corresponde a condição que deve ser cumprida pra essa classe ser adicionada.
     <input [ngClass]="{'isInvalid': invalid}"
+
 
 #### Para tratar eventos usamos o termo do evento entre parênteses.
     <form (ngSubmit)="onSubmitFunction()">
       <button (click)="onClickFunction()">Botão</button>
     <form>
+ 
  
  #### No template HTML, para executarmos loops usamos o [*ngFor](https://angular.io/api/common/NgForOf) e para executarmos condicionais usamos o [*ngIf](https://angular.io/api/common/NgIf).
      <div *ngIf="condição; else elseBlock">
