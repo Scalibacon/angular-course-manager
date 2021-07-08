@@ -34,9 +34,11 @@ Usar `ng e2e` vai executar este tipo de teste, mas aí precisa de um módulo ext
 Pra mais ajuda com o CLI do Angular é só `ng help` ou ler a [documentação](https://angular.io/cli).
 
 ## Anotações
+
 <br> 
 ### Algumas coisas podem estar erradas, já que é meu primeiro contato com o Angular. Vou corrigindo os conceitos conforme forem ficando mais claros.
 <br>
+
 #### Os componentes e os módulos precisam ser importados no arquivo app.modules.ts para serem usados nos templates.
     @NgModule({ 
       declarations: [ components ],
