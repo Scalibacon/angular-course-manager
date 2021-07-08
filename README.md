@@ -59,10 +59,12 @@ Pra mais ajuda com o CLI do Angular é só `ng help` ou ler a [documentação](h
 Neste caso a propriedade "src" terá o valor do atributo "imageUrl" do objeto "user", que deve estar presente na classe do component que tem esse código HTML inserido em seu template.
 <br>
 
+
 #### [Two-way data binding](https://angular.io/guide/two-way-binding) funciona de maneira similar ao one-way, mas também irá ouvir os eventos da view que alterarão o valor da variável do component.ts vinculada. Até o momento só vi sendo usado em forms, mas futuramente verei aplicações em outros contextos.
     <input [(ngModel)]="user.name"/>
 Neste exemplo o ngModel faz parte do módulo FormsModule, que deve ser importado no app.modules.ts pra funcionar. Creio que ele dê um set no value do input com a variável "user.name" (que deve estar no component.ts) e altere essa mesma variável conforme o usuário altere o input na view.
 <br>
+
 
 #### Para exibir o valor de variáveis JavaScript no HTML deve-se colocá-lo entre duas chaves. É possível também utilizar uma if ternário.
     <p>{{ user.description === "" ? "Vazio." : user.description }}</p>
