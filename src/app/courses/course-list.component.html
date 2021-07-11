@@ -22,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let course of filteredCourses"> <!--*ngFor faz um for da tag e do children/var courses disponível no arquivo .ts deste componente-->
+    <tr *ngFor="let course of filteredCourses"> <!--*ngFor faz um for da tag e do children/var filteredCourses disponível no arquivo .ts deste componente-->
       <td><img [src]="course.imageUrl" width=40 alt=""/></td>
       <td>{{ course.name }}</td>
       <td>{{ course.price }}</td>
@@ -33,6 +33,7 @@
       </td>
       <td>
         <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary">Editar</a>
+        <button (click)="deleteById(course.id)" class="btn btn-danger">Deletar</button>
       </td>
     </tr>
   </tbody>
